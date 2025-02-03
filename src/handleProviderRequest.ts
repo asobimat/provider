@@ -100,8 +100,13 @@ export const handleProviderRequest = ({
     proposedChain: AddEthereumChainProposedChain;
     callbackOptions?: CallbackOptions;
   }) => void;
-}) =>
-  providerRequestTransport?.reply(async ({ method, id, params }, meta) => {
+}) => 
+ {
+  debugger;
+  return providerRequestTransport?.reply(async ({ method, id, params }, meta) => {
+    debugger;
+    console.log('Method: ', method);
+    console.log('Params: ', params);
     try {
       const rateLimited = await checkRateLimit({ id, meta, method });
       if (rateLimited) {
@@ -503,4 +508,5 @@ export const handleProviderRequest = ({
         errorCode: errorCodes.INTERNAL_ERROR,
       });
     }
-  });
+  }
+)};

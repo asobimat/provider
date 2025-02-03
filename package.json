@@ -1,6 +1,6 @@
 {
-  "name": "@rainbow-me/provider",
-  "version": "0.1.1",
+  "name": "@vinox/provider",
+  "version": "0.1.4",
   "main": "dist/index.js",
   "license": "MIT",
   "files": [
